@@ -19,6 +19,8 @@ class CalculadoraHija(Calculadora):
 
     def dividir(self, op1, op2):
         """ Function to substract the operands """
+        if op2 == 0:
+            sys.exit("Error: Division by zero is not allowed")
         return op1 / op2
 
 micalc = CalculadoraHija()
