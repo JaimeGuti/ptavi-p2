@@ -22,9 +22,9 @@ if __name__ == "__main__":
         sys.exit("Error: Non numerical parameters")
 
     if sys.argv[2] == "suma":
-        result = plus(operando1, operando2)
+        result = micalc.plus(operando1, operando2)
     elif sys.argv[2] == "resta":
-        result = minus(operando1, operando2)
+        result = micalc.minus(operando1, operando2)
     else:
         sys.exit('Operación sólo puede ser sumar o restar.')
 
