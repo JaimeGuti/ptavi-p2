@@ -4,7 +4,7 @@
 import sys
 import calcoohija
 
-fichero = open(sys.argv[1],"r")
+fichero = open(sys.argv[1], "r")
 lineas = fichero.readlines()
 
 micalc = calcoohija.CalculadoraHija()
@@ -16,10 +16,12 @@ if __name__ == "__main__":
         operador = valor.rsplit(",")[0]
         operandos = valor.rsplit(",")[1:]
 
-
         operaciones = operandos[0]
         result = int(operaciones)
-        operandos = operandos[1:] #sin esta línea el primer número se repite en las operaciones
+        operandos = operandos[1:]
+        '''
+        sin esta última línea el primer número se repite en las operaciones
+        '''
 
         try:
             if operador == "suma":

@@ -24,7 +24,10 @@ if __name__ == "__main__":
 
                 operaciones = operandos[0]
                 result = int(operaciones)
-                operandos = operandos[1:] #sin esta línea el primer número se repite en las operaciones
+                operandos = operandos[1:]
+                '''
+                sin esta última línea el primer número se repite en las operaciones
+                '''
 
                 try:
                     if operador == "suma":
@@ -51,6 +54,6 @@ if __name__ == "__main__":
                     sys.exit('Operación sólo puede ser sumar, restar, multiplicar o dividir.')
 
         except csv.Error as e:
-            sys.exit('file {}, line {}: {}'.format(fichero, reader.line_num, e))
+            sys.exit('file {}, line {}:{}'.format(fichero, reader.line_num, e))
 
 fichero.close()

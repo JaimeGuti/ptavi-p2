@@ -3,6 +3,7 @@
 
 import sys
 
+
 class Calculadora(object):
     def plus(self, op1, op2):
         """ Function to sum the operands. Ops have to be ints """
@@ -11,6 +12,7 @@ class Calculadora(object):
     def minus(self, op1, op2):
         """ Function to substract the operands """
         return op1 - op2
+
 
 class CalculadoraHija(Calculadora):
     def multiplicar(self, op1, op2):
