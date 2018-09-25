@@ -12,7 +12,7 @@ micalc = calcoohija.CalculadoraHija()
 
 if __name__ == "__main__":
 
-    with open(fichero) as fich:
+    with fichero as fich:
         reader = csv.reader(fich)
 
         try:
