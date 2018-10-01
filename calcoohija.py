@@ -15,7 +15,7 @@ class Calculadora(object):
 
 
 class CalculadoraHija(Calculadora):
-    def multiplicar(self, op1, op2):
+    def multi(self, op1, op2):
         """ Function to sum the operands. Ops have to be ints """
         return op1 * op2
 
@@ -24,6 +24,7 @@ class CalculadoraHija(Calculadora):
         if op2 == 0:
             sys.exit("Error: Division by zero is not allowed")
         return op1 / op2
+
 
 micalc = CalculadoraHija()
 
@@ -39,10 +40,12 @@ if __name__ == "__main__":
     elif sys.argv[2] == "resta":
         result = micalc.minus(operando1, operando2)
     elif sys.argv[2] == "multiplica":
-        result = micalc.multiplicar(operando1, operando2)
+        result = micalc.mult(operando1, operando2)
     elif sys.argv[2] == "divide":
         result = micalc.dividir(operando1, operando2)
     else:
-        sys.exit('Operación sólo puede ser sumar, restar, multiplicar o dividir.')
+        cadena = 'Operación sólo puede ser sumar, restar, '
+        cadena += 'multiplicar o dividir.'
+        sys.exit(cadena)
 
     print(result)

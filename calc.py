@@ -13,6 +13,7 @@ def minus(op1, op2):
     """ Function to substract the operands """
     return op1 - op2
 
+
 if __name__ == "__main__":
     try:
         operando1 = int(sys.argv[1])
@@ -28,4 +29,5 @@ if __name__ == "__main__":
         sys.exit('Operación sólo puede ser sumar o restar.')
 
     print(result)
-#Aquí está el cambio
+
+# Aquí está el cambio
